@@ -101,7 +101,7 @@ int main()
 	printf("数组arr1[0]以16进制打印结果为：\t%p\n", arr1[0]);
 	printf("数组arr1[0]的内存地址为：\t%p\n", &arr1[0]);
 	int* arr1_pointer = arr1;
-	int* p = &arr1;
+	int* p = arr1;
 	//指针遍历
 	for (int i = 0;i < len;i++)
 	{
@@ -122,7 +122,7 @@ int main()
 
 	return 0;
 }
-void swap(static int* c, static int* d)
+void swap( int* c, int* d)
 {
 	int mid = *c;
 	*c = *d;
